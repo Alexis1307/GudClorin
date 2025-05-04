@@ -1,0 +1,372 @@
+/* Tablas.css */
+
+/* ESTILOS PARA TABLAS */
+.tabla-contenedor {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 1.8rem;
+}
+
+/* Título de la tabla */
+.tabla-contenedor h2 {
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: bold;
+}
+
+/*INPUT BUSQUEDA*/
+.input-busqueda{
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 60%;
+    border-radius: 5px;
+    border: ipx solid #ccc;
+}
+
+/* Estilo general para las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+/* Cabecera de la tabla */
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Estilo para las filas alternas */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Efecto hover en las filas */
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Ajuste en la primera columna */
+td:first-child, th:first-child {
+    font-weight: bold;
+}
+
+/* Estilo para las celdas de la tabla cuando están vacías */
+td:empty {
+    background-color: #f7f7f7;
+}
+
+/*BOTONES DE ACCIONES*/
+.btn-eliminar {
+    padding: 10px 20px;
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover {
+    background-color: #e74c3c;
+}
+
+.btn-editar {
+    padding: 8px 12px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-editar:hover {
+    background-color: #e67e22;
+}
+
+.btn-confirmar {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-confirmar:hover {
+    background-color: #2ecc71;
+}
+
+.btn-cancelar {
+    background-color: rgb(97, 97, 97);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-cancelar:hover {
+    background-color: gray;
+}
+
+/*PANEL DE ACCIONES GENERAL*/
+.botones-acciones {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.paneles-acciones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+/*MODAL DE CONFIRMACION*/
+.mensaje-confirmacion {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+.mensaje-confirmacion > div {
+    background-color: #fff; /* Fondo blanco sólido */
+    color: #333; /* Texto oscuro para buena legibilidad */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    min-width: 320px;
+    max-width: 90%;
+    opacity: 1; /* Asegura opacidad completa */
+}
+
+.mensaje-confirmacion p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+/*MODAL DE CONFIRMACION*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+.actualizar-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 25px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    width: 350px;
+}
+
+.actualizar-panel h3 {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/*CONTENEDOR DE LOS INPUTS*/
+.inputs-actualizar {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.inputs-actualizar input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.inputs-actualizar .botones-formulario {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.inputs-actualizar button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.inputs-actualizar button:hover {
+    background-color: #218838;
+}
+
+.inputs-label{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/*MUESTRA LOS DETALLES PRODUCTOS*/
+.modal-detalles {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    z-index: 1001;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.modal-img{
+    max-width: 100%;
+    height: 100px;
+    margin-bottom: 1rem;
+}
+
+.btn-cerrar {
+    margin-top: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.btn-cerrar:hover {
+    background-color: #555;
+}
+
+/* Paginación */
+.paginacion {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.paginacion button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.paginacion button:hover {
+    background-color: #555;
+}
+
+.paginacion button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.paginacion span {
+    font-size: 14px;
+    color: #333;
+}
+
+/* ---------- ESTILOS RESPONSIVOS PARA TABLAS ---------- */
+@media screen and (max-width: 768px) {
+    .tabla-contenedor {
+        overflow-x: auto; /* permite desplazamiento horizontal */
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    table {
+        min-width: 600px; /* asegura espacio mínimo para scroll */
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+
+    .input-busqueda {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .btn-editar, .btn-eliminar, .btn-confirmar, .btn-cancelar {
+        padding: 6px 10px;
+        font-size: 0.75rem;
+    }
+
+    .paneles-acciones {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .modal-detalles {
+        width: 90%;
+        font-size: 1rem;
+    }
+
+    .actualizar-panel {
+        width: 90%;
+    }
+
+    .inputs-actualizar {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .inputs-actualizar input {
+        width: 100%;
+    }
+
+    .paginacion {
+        flex-wrap: wrap;
+        gap: 6px;
+        font-size: 12px;
+    }
+
+    .paginacion button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

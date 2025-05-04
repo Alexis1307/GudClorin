@@ -1,0 +1,62 @@
+.modal-formulario {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* fondo oscurecido */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.formulario-agregar {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 270px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+.formulario-agregar input{
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 180px;
+}
+
+.botones-modal {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px 0 0;
+}
+
+.btn-agregar-producto {
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-agregar-producto:hover{
+    background-color: #2ecc71;
+}
+
+.btn-cancelar {
+    background-color: rgb(97, 97, 97);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-cancelar:hover{
+    background-color: gray;
+}
