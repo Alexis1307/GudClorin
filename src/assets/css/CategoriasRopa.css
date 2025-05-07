@@ -1,0 +1,31 @@
+/* assets/css/CategoriasRopa.css */
+.categorias-ropa {
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+  }
+  .categorias-ropa h2 {
+    color: #000;
+    margin-bottom: 1.5rem;
+  }
+  .categorias-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  .categoria {
+    cursor: pointer;
+    text-align: center;
+  }
+  .categoria img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #FFD700;
+  }
+  .categoria h3 {
+    margin-top: 0.5rem;
+    color: #000;
+  }
+  

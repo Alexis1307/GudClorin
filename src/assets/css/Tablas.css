@@ -370,3 +370,147 @@ td:empty {
         font-size: 12px;
     }
 }
+
+.modal-boleta {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border: none;
+    padding: 20px 25px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 90%; /* Limita la altura máxima */
+    z-index: 1001;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 12px;
+    transition: all 0.3s ease-in-out;
+    overflow-y: auto; /* Permite desplazamiento vertical si es necesario */
+}
+
+/* Titulo */
+.boleta-contenido h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+}
+
+/* Párrafos */
+.boleta-contenido p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* Tabla */
+.boleta-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+.boleta-tabla th,
+.boleta-tabla td {
+    border: 1px solid #e0e0e0;
+    padding: 8px 10px;
+    text-align: left;
+}
+
+.boleta-tabla th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+    color: #555;
+}
+
+.boleta-tabla td {
+    background-color: #fafafa;
+    color: #333;
+}
+
+.boleta-contenido hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+/* Para pantallas pequeñas */
+@media (max-width: 600px) {
+    .modal-boleta {
+        width: 90%;
+        max-width: 350px;
+        max-height: 80%; /* Limita la altura en pantallas pequeñas */
+        padding: 20px 15px;
+    }
+
+    .boleta-contenido h2 {
+        font-size: 1.3rem;
+    }
+
+    .boleta-contenido p {
+        font-size: 0.85rem;
+    }
+
+    .boleta-tabla th, .boleta-tabla td {
+        font-size: 0.8rem;
+        padding: 6px 8px;
+    }
+
+    .boleta-tabla {
+        font-size: 0.8rem;
+    }
+
+    .boleta-contenido hr {
+        margin: 12px 0;
+    }
+}
+
+/* Para pantallas más grandes */
+@media (min-width: 601px) {
+    .modal-boleta {
+        width: 400px;
+        max-width: 90%;
+        padding: 30px 25px;
+        max-height: 80%; /* Asegura que la boleta no ocupe toda la altura de la pantalla */
+    }
+
+    .boleta-contenido h2 {
+        font-size: 1.5rem;
+    }
+
+    .boleta-contenido p {
+        font-size: 0.95rem;
+    }
+
+    .boleta-tabla th, .boleta-tabla td {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    .boleta-tabla {
+        font-size: 0.9rem;
+    }
+
+    .boleta-contenido hr {
+        margin: 15px 0;
+    }
+}
+
+.btn-descargar {
+    background-color: #4caf50;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.btn-descargar:hover {
+    background-color: #45a049;
+}

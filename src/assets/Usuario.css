@@ -1,0 +1,14 @@
+/* src/assets/Usuario.css */
+.pagina-usuario {
+    padding-top: 80px; /* espacio para el navbar */
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    min-height: 100vh;
+}
+
+.contenedor-principal {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    gap: 20px;
+}

@@ -1,0 +1,100 @@
+/* src/assets/css/SeccionRopa.css */
+.seccion-ropa {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+}
+
+.titulo-seccion {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.filtros button {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.filtros button:hover {
+  background-color: #444;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tarjeta-producto {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-5px);
+}
+
+.imagen-producto {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.tarjeta-producto h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #222;
+}
+
+.tarjeta-producto p {
+  color: #555;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.botones {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.comprar,
+.ver-mas {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.comprar:hover,
+.ver-mas:hover {
+  background-color: #555;
+}

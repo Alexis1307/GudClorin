@@ -1,0 +1,57 @@
+/* assets/css/SeccionOfertas.css */
+.seccion-ofertas {
+    padding: 2rem;
+    background: #f5f5f5;
+    text-align: center;
+  }
+  .seccion-ofertas h2 {
+    color: #000;
+    margin-bottom: 1.5rem;
+  }
+  .ofertas-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .oferta-card {
+    position: relative;
+    background: #fff;
+    padding: 1rem;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .etiqueta-descuento {
+    position: absolute;
+    top: 10px; left: 10px;
+    background: #FFD700;
+    color: #000;
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
+  }
+  .oferta-card img {
+    width: 100%;
+    height: auto;
+  }
+  .oferta-card h3 {
+    color: #000;
+    margin: 0.5rem 0;
+  }
+  .precio-antes {
+    text-decoration: line-through;
+    color: #888;
+  }
+  .precio-ahora {
+    color: #000;
+    font-weight: bold;
+  }
+  .oferta-card button {
+    margin-top: 0.5rem;
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+  }
+  

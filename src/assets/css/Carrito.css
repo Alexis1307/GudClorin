@@ -1,0 +1,170 @@
+.carrito-seccion {
+    padding: 2rem;
+    max-width: 1200px; /* Aumenté el ancho máximo para mayor espacio */
+    margin: auto;
+}
+
+.carrito-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    gap: 1.5rem; /* Espacio entre las tarjetas */
+    grid-auto-rows: 1fr; /* Asegura que las filas tengan la misma altura */
+    justify-items: center; /* Centra los elementos en cada celda */
+}
+
+.carrito-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+    width: 100%; /* La tarjeta ocupará todo el espacio disponible en su celda */
+    max-width: 250px; /* Máximo ancho para las tarjetas */
+}
+
+.carrito-card:hover {
+    transform: translateY(-4px);
+}
+
+/* Imagen de los productos */
+.carrito-card img {
+    width: 100%;
+    height: 200px; /* Mantiene la altura constante */
+    object-fit: cover; /* Mantiene las proporciones sin distorsionar */
+    background-color: #f0f0f0; /* Fondo gris claro si no hay imagen */
+}
+
+/* Contenedor de la información */
+.carrito-card .info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+}
+
+/* Títulos y texto */
+.carrito-card h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #222;
+    text-align: center;
+}
+
+.carrito-card p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Estilo del botón de eliminar */
+.carrito-card button {
+    padding: 0.5rem 1rem;
+    background-color: #e53935;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem; /* Separación con el contenido */
+}
+
+.carrito-card button:hover {
+    background-color: #c62828;
+}
+
+.carrito-card button .icon {
+    font-size: 1.2rem; /* Tamaño adecuado para el ícono */
+}
+
+/* Estilos del título y el texto de la sección */
+.carrito-seccion h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #333;
+}
+
+.carrito-seccion p {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+}
+
+.info p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.confirmacion-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+}
+
+.modal-contenido input {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    width: 60%;
+    font-size: 1rem;
+}
+
+.modal-botones {
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-botones button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFD700;
+    color: white;
+}
+
+.modal-botones button:hover {
+    background-color: #e6b800;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1200px) {
+    .carrito-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 900px) {
+    .carrito-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas aún más pequeñas */
+    }
+}
+
+@media (max-width: 600px) {
+    .carrito-grid {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+}

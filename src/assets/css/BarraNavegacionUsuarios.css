@@ -1,0 +1,171 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: white;
+    padding: 0.7rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    animation: slideInTop 0.5s ease-out;
+}
+
+@keyframes slideInTop {
+    from { transform: translateY(-100%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #FFD700;
+    cursor: pointer; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li {
+    cursor: pointer; /* Para mostrar que es un enlace clickeable */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #FFD700;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.icono {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.icono:hover {
+    transform: scale(1.1);
+    color: #FFD700;
+}
+
+.usuario-menu {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 200;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.submenu button {
+    display: block;
+    width: 150px;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+}
+
+.submenu button:hover {
+    background-color: #222;
+    color: #FFD700;
+}
+
+.menu-hamburguesa {
+    font-size: 1.5rem;
+    display: none;
+}
+
+.contador-carrito {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 5px;
+}
+.carrito-icono {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.favoritos-icono {
+    position: relative;
+    display: inline-block;
+}
+
+.favoritos-icono .icono,
+.carrito-icono .icono {
+    color: white; /* Asegura que siempre sean blancos */
+}
+
+.favoritos-icono .icono:hover,
+.carrito-icono .icono:hover {
+    color: #FFD700; /* Cambiar al color dorado al pasar el mouse */
+}
+
+.contador-favoritos {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        display: none;
+        width: 100%;
+        background-color: #111;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 1rem;
+        gap: 1rem;
+        flex-direction: column;
+        text-align: center;
+        animation: slideIn 0.3s ease-out;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    .navbar .nav-links li {
+        padding: 1rem 0;
+        border-bottom: 1px solid #333;
+    }
+
+    .menu-hamburguesa {
+        display: block;
+    }
+}

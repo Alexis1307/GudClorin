@@ -1,0 +1,136 @@
+/* Carrusel contenedor */
+.carrusel-contenedor {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+/* Carrusel (contiene las tarjetas de producto) */
+.carrusel {
+    display: flex;
+    width: max-content;
+    animation: deslizar 30s linear infinite;
+}
+
+.carrusel.pausado {
+    animation-play-state: paused;
+}
+
+/* Animación infinita para el movimiento de las tarjetas */
+@keyframes deslizar {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* Tarjeta de oferta */
+.oferta-card {
+    display: inline-block;
+    width: 200px;
+    margin: 0 10px;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.oferta-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Sombra más suave */
+}
+
+/* Imagen dentro de la tarjeta */
+.imagen-cambio {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.imagen-cambio img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.imagen-cambio img.visible {
+    opacity: 1;
+    z-index: 1;
+}
+
+.imagen-cambio img.oculto {
+    opacity: 0;
+    z-index: 0;
+}
+
+/* Iconos flotantes */
+.iconos-flotantes {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 2;
+}
+
+.oferta-card:hover .iconos-flotantes {
+    opacity: 1;
+}
+
+/* Botones de favorito y carrito */
+.btn-favorito,
+.btn-carrito {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    padding: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #333;
+    font-size: 22px;
+}
+
+.btn-favorito:hover,
+.btn-carrito:hover {
+    transform: scale(1.1);
+}
+
+.btn-favorito.activo { color: red; }
+.btn-carrito.activo { color: green; }
+
+/* Texto de la tarjeta */
+h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.precio-antes {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 8px;
+}
+
+.precio-ahora {
+    color: #e74c3c;
+    font-weight: bold;
+}
