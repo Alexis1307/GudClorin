@@ -20,7 +20,7 @@ export default function CategoriasRopa() {
           <img src={model2} alt="Mujeres" />
           <h3>Mujeres</h3>
         </div>
-        <div className="categoria" onClick={() => navigate('/Niños')}>
+        <div className="categoria" onClick={() => navigate('/Ninos')}>
           <img src={model3} alt="Niños" />
           <h3>Niños</h3>
         </div>

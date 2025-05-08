@@ -10,7 +10,11 @@ export default function LoginUsuario() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    navigate('/usuarios');
+    if (user === 'soh4n.user' && pass === 'leandrodiazaliaga') {
+      navigate('/usuarios');
+    } else {
+      alert('Usuario o contraseña incorrectos');
+    }
   };
 
   return (
@@ -19,8 +23,20 @@ export default function LoginUsuario() {
       <div className="login-container">
         <h2>Login Usuario</h2>
         <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Usuario" value={user} onChange={e => setUser(e.target.value)} required />
-          <input type="password" placeholder="Contraseña" value={pass} onChange={e => setPass(e.target.value)} required />
+          <input
+            type="text"
+            placeholder="Usuario"
+            value={user}
+            onChange={e => setUser(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={pass}
+            onChange={e => setPass(e.target.value)}
+            required
+          />
           <button type="submit">Ingresar</button>
         </form>
       </div>

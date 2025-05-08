@@ -11,8 +11,6 @@ function AgregarCliente() {
     };
 
     const manejarAgregar = () => {
-        // Aquí podrías agregar lógica para guardar el cliente
-
         // Mostrar mensaje flotante
         setMensajeExito(true);
 

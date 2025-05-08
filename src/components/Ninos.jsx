@@ -1,4 +1,3 @@
-// src/componentes/Hombres.jsx
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import BarraNavegacion from '../components/BarraNavegacion';
@@ -6,7 +5,6 @@ import BarraNavegacionUsuarios from './BarraNavegacionUsuarios';
 import PieDePagina from './PieDePagina';
 import '../assets/css/SeccionRopa.css';
 
-// Importar las imágenes
 import ropa1    from '../assets/IMG/ROPA 24.webp';
 import polo1    from '../assets/IMG/ROPA 28.webp';
 import pantalon1 from '../assets/IMG/ROPA 26.webp';

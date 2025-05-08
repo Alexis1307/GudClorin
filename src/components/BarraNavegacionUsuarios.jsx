@@ -26,7 +26,7 @@ function BarraNavegacionUsuarios() {
     };
 
     const handleLogout = () => {
-        // Por ahora solo redirige a inicio
+        // Redirige a inicio
         navigate('/');
     };
 

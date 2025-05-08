@@ -11,10 +11,9 @@ function AgregarStock() {
     };
 
     const manejarAgregar = () => {
-        // Aquí podrías agregar lógica para guardar el producto si lo necesitas
         setMostrarMensaje(true);
         setTimeout(() => setMostrarMensaje(false), 2000); // Oculta el mensaje luego de 2 segundos
-        cerrarFormulario(); // También cerramos el formulario
+        cerrarFormulario(); // Cerramos el formulario
     };
 
     return (

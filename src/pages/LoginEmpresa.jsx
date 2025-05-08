@@ -10,7 +10,11 @@ export default function LoginEmpresa() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    navigate('/dueno');
+    if (empresa === 'soh4n.35' && pass === 'leandrodiazaliaga') {
+      navigate('/dueno');
+    } else {
+      alert('Usuario o contraseña incorrectos');
+    }
   };
 
   return (
@@ -19,8 +23,20 @@ export default function LoginEmpresa() {
       <div className="login-container">
         <h2>Login Empresa</h2>
         <form onSubmit={handleSubmit}>
-          <input type="text" placeholder="Usuario" value={empresa} onChange={e => setEmpresa(e.target.value)} required />
-          <input type="password" placeholder="Contraseña" value={pass} onChange={e => setPass(e.target.value)} required />
+          <input
+            type="text"
+            placeholder="Usuario"
+            value={empresa}
+            onChange={e => setEmpresa(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            value={pass}
+            onChange={e => setPass(e.target.value)}
+            required
+          />
           <button type="submit">Ingresar</button>
         </form>
       </div>

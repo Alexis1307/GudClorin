@@ -13,7 +13,7 @@ function VistaProducto() {
     const { id } = useParams();
     const navigate = useNavigate();
 
-    // 🔽 Obtener producto desde la API usando el id
+    // Obtener producto desde la API usando el id
     useEffect(() => {
         fetch(`https://dummyjson.com/products/${id}`)
             .then(res => res.json())

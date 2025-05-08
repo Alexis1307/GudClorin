@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import ListaVentas from './ListaVentas';
-import '../assets/css/Agregar.css'; // Reutilizamos estilos
+import '../assets/css/Agregar.css'; 
 
 function AgregarVenta() {
     const [mostrarFormulario, setMostrarFormulario] = useState(false);
@@ -11,10 +11,9 @@ function AgregarVenta() {
     };
 
     const manejarAgregar = () => {
-        // Aquí podrías guardar la venta en tu estado o base de datos si lo deseas
         setMostrarMensaje(true);
         setTimeout(() => setMostrarMensaje(false), 2000); // Oculta el mensaje después de 2 segundos
-        cerrarFormulario(); // Cierra el formulario
+        cerrarFormulario(); // Cerrar el formulario
     };
 
     return (

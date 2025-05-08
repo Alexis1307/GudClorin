@@ -26,7 +26,7 @@ function ListaClientes() {
                     apellido: user.lastName,
                     edad: user.age,
                     celular: user.phone,
-                    productos: [] // luego se llenará con los productos del carrito
+                    productos: [] 
                 }));
                 setClientes(clientesFormateados);
                 setCargando(false);
